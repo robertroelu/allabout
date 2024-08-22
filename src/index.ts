@@ -33,6 +33,7 @@ window.Webflow.push(() => {
     gsap.to('html', { '--mode-1--backgroundcolor--bgc2': 'white', duration: 0.3 });
   }
 
+  // Set variable on logo after animation
   setTimeout(() => {
     const elLogo = document.querySelector('.logo_embed') as HTMLElement;
     if (!elLogo) return;
@@ -55,8 +56,9 @@ window.Webflow.push(() => {
 });
 
 // Code at the end of head in Webflow
+// <!-- Script for getting switch without flash -->
 // <script>
-// 	  // Colors mode dark
+// 	 // Colors mode dark
 //   const fc1_mode2 = getComputedStyle(document.documentElement).getPropertyValue(
 //     '--mode-2--fontcolor--fc1'
 //   );
@@ -86,12 +88,12 @@ window.Webflow.push(() => {
 
 // 	const storageSwitch = localStorage.getItem('switch');
 // 	if (storageSwitch === "dark") {
-//   	    document.documentElement.style.setProperty('--mode-1--fontcolor--fc1', fc1_mode2);
+//   	document.documentElement.style.setProperty('--mode-1--fontcolor--fc1', fc1_mode2);
 //     document.documentElement.style.setProperty('--mode-1--linkcolor--lc1', lc1_mode2);
 //     document.documentElement.style.setProperty('--mode-1--backgroundcolor--bgc1', bgc1_mode2);
 //     document.documentElement.style.setProperty('--mode-1--backgroundcolor--bgc2', bgc2_mode2);
 //   } else {
-//   	    document.documentElement.style.setProperty('--mode-1--fontcolor--fc1', fc1);
+//   	 document.documentElement.style.setProperty('--mode-1--fontcolor--fc1', fc1);
 //     document.documentElement.style.setProperty('--mode-1--linkcolor--lc1', lc1);
 //     document.documentElement.style.setProperty('--mode-1--backgroundcolor--bgc1', bgc1);
 //     document.documentElement.style.setProperty('--mode-1--backgroundcolor--bgc2', bgc2);
